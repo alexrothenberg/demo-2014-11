@@ -10,7 +10,7 @@ angular.module('demoApp')
         var yahooResponse = angular.fromJson(yahooResponseString)[0]
         return {
           ticker: yahooResponse.t,
-          price:  yahooResponse.l
+          price:  parseFloat(yahooResponse.l)
         }
       }
 
