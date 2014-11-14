@@ -13,7 +13,8 @@
       {{ stock.ticker }} - {{ stock.price }}
     </li>
     <li>
-      New Ticker <input type="text" ng-model="newTicker">
+      <label for="new_ticker">New Ticker</label>
+      <input type="text" ng-model="newTicker" id="new_ticker">
       <button ng-click="addNewTicker()">Add</button>
     </li>
   </ul>
