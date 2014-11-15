@@ -53,7 +53,7 @@ describe('Controller: MainCtrl', function () {
         ,"pcls_fix" : "39.26"
         }
       ];
-      _$httpBackend_.expectGET('http://finance.google.com/finance/info?client=ig&q=NASDAQ:voya')
+      _$httpBackend_.expectGET('https://finance.google.com/finance/info?client=ig&q=NASDAQ:voya')
         .respond(' // ' + JSON.stringify(responseJson));
 
       controller('MainCtrl', {
