@@ -351,10 +351,6 @@ module.exports = function (grunt) {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
-    },
-
-    exec: {
-      cucumber: 'bundle && cucumber'
     }
   });
 
@@ -384,8 +380,7 @@ module.exports = function (grunt) {
     'concurrent:test',
     'autoprefixer',
     'connect:test',
-    'karma',
-    'exec:cucumber'
+    'karma'
   ]);
 
   grunt.registerTask('build', [
