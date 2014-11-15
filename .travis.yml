@@ -9,6 +9,7 @@ before_deploy:
 deploy:
   provider: heroku
   skip_cleanup: true
+  strategy: api
   api_key:
     secure: RLRdxOsRrqN0ypS75XenfIO2LhbTHIfAgrOzHfVtQHrxGB8clk1yYWYpgWOx2aYKURESgMjAJbSrCXEruvJEUZuuvrfDRWc59qOymPN0CPoBpdYCmVh6TNELNtwWTHvcMVSDV0iZJIsCB55jrjgvym5LGUgnMF4WEfhHhFy5iwI=
   app: demo-2014-11
