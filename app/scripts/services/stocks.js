@@ -19,7 +19,7 @@ angular.module('demoApp')
       }
 
       var add = function(ticker) {
-        var url = 'http://finance.google.com/finance/info\?client\=ig\&q\=NASDAQ:' + ticker;
+        var url = 'https://finance.google.com/finance/info\?client\=ig\&q\=NASDAQ:' + ticker;
         var promise = $http.get(url)
         promise.success(function(response) {
           var stock = toStock(response);
