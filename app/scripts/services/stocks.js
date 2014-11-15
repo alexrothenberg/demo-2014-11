@@ -3,14 +3,10 @@ angular.module('demoApp')
     '$http', function($http) {
       var stocks = [];
 
-      var toStock = function(yahooResponseString) {
-        if (yahooResponseString.substring(1,3) === '//') {
-          yahooResponseString = yahooResponseString.substring(3)
-        }
-        var yahooResponse = angular.fromJson(yahooResponseString)[0]
+      var toStock = function(quandlResponse) {
         return {
-          ticker: yahooResponse.t,
-          price:  parseFloat(yahooResponse.l)
+          ticker: quandlResponse.code,
+          price:  quandlResponse.data[0][1]
         }
       }
 
@@ -19,7 +15,7 @@ angular.module('demoApp')
       }
 
       var add = function(ticker) {
-        var url = 'https://finance.google.com/finance/info\?client\=ig\&q\=NASDAQ:' + ticker;
+        var url = 'https://www.quandl.com/api/v1/datasets/WIKI/' + ticker.toUpperCase() + '.json'
         var promise = $http.get(url)
         promise.success(function(response) {
           var stock = toStock(response);
