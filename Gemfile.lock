@@ -47,4 +47,5 @@ DEPENDENCIES
   capybara
   cucumber
   poltergeist
+  rack
   rspec-expectations
