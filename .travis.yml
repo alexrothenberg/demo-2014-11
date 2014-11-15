@@ -1,6 +1,13 @@
 language: node_js
 node_js:
-  - '0.10'
+- '0.10'
 before_script:
-  - 'npm install -g bower grunt-cli'
-  - 'bower install'
+- npm install -g bower grunt-cli
+- bower install
+deploy:
+  provider: heroku
+  api_key:
+    secure: RLRdxOsRrqN0ypS75XenfIO2LhbTHIfAgrOzHfVtQHrxGB8clk1yYWYpgWOx2aYKURESgMjAJbSrCXEruvJEUZuuvrfDRWc59qOymPN0CPoBpdYCmVh6TNELNtwWTHvcMVSDV0iZJIsCB55jrjgvym5LGUgnMF4WEfhHhFy5iwI=
+  app: demo-2014-11
+  on:
+    repo: alexrothenberg/demo-2014-11
