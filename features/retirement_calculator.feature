@@ -9,12 +9,12 @@ Background:
 
 Scenario: I can track Voya
   When I track "voya"
-   And I wait 5 seconds
+   And I wait 10 seconds
   Then I should see a listing for "VOYA"
 
 Scenario: I cannot track a company that does not exist
   When I track "this-is-not-a-real-company"
-   And I wait 5 seconds
+   And I wait 10 seconds
   Then I should not see a listing for "this-is-not-a-real-company"
 
 
