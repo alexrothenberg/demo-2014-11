@@ -32,7 +32,7 @@ describe('Controller: MainCtrl', function () {
   );
 
   it('should let us add a stock',
-     inject(function ($controller, $rootScope, _$httpBackend_) {
+    inject(function ($controller, $rootScope, _$httpBackend_) {
       var responseJson = {
         code: "VOYA",
         column_names: ["Date", "Open"],
