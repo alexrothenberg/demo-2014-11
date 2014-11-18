@@ -384,8 +384,8 @@ module.exports = function (grunt) {
     'concurrent:test',
     'autoprefixer',
     'connect:test',
-    'karma',
-    'exec:cucumber'
+    'karma' //,
+//    'exec:cucumber'
   ]);
 
   grunt.registerTask('build', [
